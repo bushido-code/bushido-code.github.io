@@ -3,7 +3,8 @@ html {
     font-size: 12pt;
 }
 
-html,body,h1,h2,h3,h4,h5,h6,p {
+html, body, div, article, section, main, nav, aside, blockquote,
+h1, h2, h3, h4, h5, h6, p, ul, ol, table {
     margin: 0;
     padding: 0;
 }
@@ -50,7 +51,7 @@ article {
 }
 
 .left-content {
-    border-right:5px dotted #666;   
+    border-right:5px dotted #666;
     text-align:right;
 }
 .left-content p {
@@ -68,7 +69,7 @@ article {
 -moz-transition: all 0.7 ease-in-out;
 -ms-transition: all 0.7s ease-in-out;
 -o-transition: all 0.7s ease-in-out;
-transition: all 0.7s ease-in-out;   
+transition: all 0.7s ease-in-out;
 }
 .left-content .more-padding {
   padding-right:100px;
@@ -107,7 +108,7 @@ transition: all 0.7s ease-in-out;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    background: url("office.jpg") no-repeat center center; 
+    background: url("office.jpg") no-repeat center center;
 }
 
 .main * {

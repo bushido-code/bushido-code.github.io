@@ -9,9 +9,58 @@ if (!Array.prototype.shuffle) {
             // Generate a random index less than or equal to it,
             const r = Math.floor(Math.random() * (i + 1))
             // And swap it with the current index.
-            this[i] = this[i] + this[r]
-            this[r] = this[i] - this[r]
-            this[i] = this[i] - this[r]
+            const t = this[i]
+            this[i] = this[r]
+            this[r] = t
         }
+        return this
     }
 }
+
+// Polyfill: SVG Inliner
+// ---------------------
+// Replaces all .svg images with the equivalent inline svg, when given the class
+// "inline".
+$(function() {
+    $('img.svg').each(function () {
+        const $i = $(this)
+        const iID = $i.attr('id')
+        const iClass = $i.attr('class')
+        const iStyle = $i.attr('style')
+        const iURL = $i.attr('src')
+
+        $.get({
+            url: iURL,
+            cache: false
+        }).done(function (data) {
+            // Add replaced ID and classes to the new SVG, and remove invalid XML
+            // tags as per http://validator.w3.org.
+            const $svg = $('<div>' + data + '</div>').find('svg')
+            if (iID) $svg.attr('id', iID)
+            if (iClass) $svg.attr('class', iClass)
+            if (iStyle) $svg.attr('style', iStyle)
+            $svg.removeAttr('xmlns:a')
+            $i.replaceWith($svg)
+        }).fail(function () {
+            console.log("FDSAF")
+        })
+    })
+})
+
+// Polyfill: Smooth Internal Linking
+// ---------------------------------
+// Removes the jumpy effect when clicking on internal links, instead replacing
+// it with a smooth scroll.
+$(function () {
+    $('a').each(function () {
+        const $a = $(this)
+        const $t = $($a.attr('href'))
+        if ($t.length == 0) return
+        $a.click(function (e) {
+            e.preventDefault()
+            $('html, body').animate({
+                scrollTop: $t.offset().top - $('#header').height()
+            })
+        })
+    })
+})

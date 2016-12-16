@@ -9,3 +9,12 @@ function checkScroll() {
 $(window).on("scroll load resize", function () {
     checkScroll()
 })
+
+$(function () {
+    $('#landing .typed').typed({
+        strings: ['Google', 'SpaceX', 'Palantir', 'Facebook'].shuffle(),
+        typeSpeed: 40,
+        backSpeed: 40,
+        backDelay: 600
+    })
+})

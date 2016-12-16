@@ -4,13 +4,13 @@
 
 .button {
     display: inline-block;
-    margin: 0;
     padding: 0 1.25em;
-    height: 3em;
-    position: relative;
-    color: #ffffff;
+    height: 2em;
+    line-height: 2em;
+    color: #000000;
+    background: hsl(0, 0%, 92%);
     border: none;
-    border-radius: calc(1rem / 3);
+    border-radius: calc(1rem / 4);
     font-weight: 500;
     text-transform: uppercase;
     cursor: pointer;
@@ -23,7 +23,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    border-radius: calc(1rem / 3)
+    border-radius: calc(1rem / 4)
 }
 
 .button:hover::before {
@@ -35,19 +35,15 @@
     box-shadow: 0 .2em 0 rgba(0, 0, 0, 0.3) inset;
 }
 
-.button:not(.blue, .green, .lime, .orange, .red, .purple) {
-    background: #54657e;
-}
-
 .button.micro { font-size: 0.7rem; }
 .button.tiny { font-size: 0.8rem; }
 .button.small { font-size: 0.9rem; }
-.button, button.standard { font-size: 1rem; }
+.button.standard { font-size: 1rem; }
 .button.large { font-size: 1.2rem; }
 .button.huge { font-size: 1.4rem; }
 
-.button.rounded { border-radius: 1.5em; }
-.button.rounded::before { border-radius: 1.5em; }
+.button.rounded { border-radius: 1em; }
+.button.rounded::before { border-radius: 1em; }
 
 .button.ghost:not(:hover, :active) { color: #8493a8; }
 .button.ghost:not(:hover, :active) { background: transparent; }
@@ -56,25 +52,14 @@
 .button.ghost:active::before { border-width: 0; }
 
 /* Background Colors */
-.button.blue   { background: #0082d5; }
-.button.green  { background: #04be5b; }
-.button.lime   { background: #9dbf16; }
-.button.orange { background: #ff9948; }
-.button.red    { background: #d2335c; }
-.button.purple { background: #68228B; }
+.button.yellow, .button.purple { color: #ffffff; }
+.button.yellow { background: #E6C019; }
+.button.purple { background: #9933CC; }
 
 /* Text Colors */
-.button.ghost:not(:hover, :active).blue   { color: #0082d5; }
-.button.ghost:not(:hover, :active).green  { color: #04be5b; }
-.button.ghost:not(:hover, :active).lime   { color: #9dbf16; }
-.button.ghost:not(:hover, :active).orange { color: #ff9948; }
-.button.ghost:not(:hover, :active).red    { color: #d2335c; }
-.button.ghost:not(:hover, :active).purple { color: #a93aba; }
+.button.ghost:not(:hover, :active).yellow { color: #E6C019; }
+.button.ghost:not(:hover, :active).purple { color: #9933CC; }
 
 /* Border Colors */
-.button.ghost.blue::before   { border-color: #0082d5; }
-.button.ghost.green::before  { border-color: #04be5b; }
-.button.ghost.lime::before   { border-color: #9dbf16; }
-.button.ghost.orange::before { border-color: #ff9948; }
-.button.ghost.red::before    { border-color: #d2335c; }
-.button.ghost.purple::before { border-color: #a93aba; }
+.button.ghost.yellow::before { border-color: #E6C019; }
+.button.ghost.purple::before { border-color: #9933CC; }

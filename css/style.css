@@ -142,6 +142,22 @@ a {
     opacity: .8;
 }
 
+.typed-cursor {
+    display: inline-block;
+    width: 0;
+    overflow: visible;
+    left: -10px;
+    color: #9933cc;
+    font-size: 1.1em;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
 #curriculum {
     background: hsl(0, 0%, 95%);
     display: flex;
@@ -337,20 +353,4 @@ a {
 }
 .timeline .event:nth-child(4n+4)::after {
     border-left-color: #ffffff;
-}
-
-.typed-cursor {
-    display: inline-block;
-    width: 0;
-    overflow: visible;
-    left: -10px;
-    color: #9933cc;
-    font-size: 1.1em;
-    animation: blink 0.7s infinite;
-}
-
-@keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
 }

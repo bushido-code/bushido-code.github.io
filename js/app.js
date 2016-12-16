@@ -1,3 +1,7 @@
+$( document ).ready(function() {
+    $(".dropdown-button").dropdown({ hover: true });
+});
+
 function checkScroll() {
     if ($(window).scrollTop() > 0) {
         $('.header').addClass("scrolled")

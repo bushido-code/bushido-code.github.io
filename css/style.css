@@ -8,6 +8,7 @@ hgroup, h1, h2, h3, h4, h5, h6, p, ul, ol, table, span, a, img {
     position: relative;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 p {
@@ -157,7 +158,7 @@ a {
 }
 
 #curriculum section {
-    flex-grow: 1;
+    flex: 1 24%;
     width: 200px;
     margin: 2px;
     padding: 4rem 2rem 3rem;
@@ -193,6 +194,9 @@ a {
 }
 
 #schedule {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
     background: hsl(280, 40%, 30%);
 }
 
@@ -210,34 +214,54 @@ a {
 }
 
 .timeline {
-    display:
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+    margin: 0 0 4rem;
+    padding: 0 1rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: .5rem;
+    margin-left: -.25rem;
+    background: url('../img/timeline-dot.svg');
+    background-size: .5rem 1rem;
 }
 
 .timeline .event {
     max-width: 400px;
-    margin: 4rem;
     display: flex;
+    justify-content: space-between;
     background: #ffffff;
     box-shadow: 0 .5rem rgba(0, 0, 0, 0.4);
 }
 
+.timeline .event.interval-1h { margin-top: -3rem; }
+.timeline .event.interval-2h { margin-top: 0; }
+.timeline .event.interval-3h { margin-top: 3rem; }
+.timeline .event.interval-4h { margin-top: 6rem; }
+.timeline .event.interval-5h { margin-top: 9rem; }
+.timeline .event.interval-6h { margin-top: 12rem; }
+.timeline .event.interval-7h { margin-top: 15rem; }
+.timeline .event.interval-8h { margin-top: 18rem; }
+.timeline .event:first-child { margin-top: 1rem; }
+.timeline .event:last-child { margin-bottom: 1rem; }
+
 .timeline .event::before, .timeline .event::after {
     content: '';
     position: absolute;
-    right: 100%;
     top: 50%;
     width: 0;
     height: 0;
     border: 1rem solid transparent;
 }
-.timeline .event::before {
-    margin-top: -.4rem;
-    border-right-color: rgba(0, 0, 0, 0.4);
-}
-.timeline .event::after {
-    margin-top: -1rem;
-    border-right-color: #ffffff;
-}
+.timeline .event::before { margin-top: -.4rem; }
+.timeline .event::after { margin-top: -1rem; }
 
 .timeline .event h1 {
     font-family: 'Roboto', sans-serif;
@@ -271,12 +295,48 @@ a {
     height: 3rem;
 }
 
+/* Primary Cases: Orientation */
 .timeline .event:nth-child(2n+1) {
-
+    align-self: flex-start;
+    margin-left: calc(50% + 2rem);
+}
+.timeline .event:nth-child(2n+1)::before,
+.timeline .event:nth-child(2n+1)::after { right: 100%; }
+.timeline .event:nth-child(2n+1)::before {
+    border-right-color: rgba(0, 0, 0, 0.4);
+}
+.timeline .event:nth-child(2n) {
+    align-self: flex-end;
+    margin-right: calc(50% + 2rem);
+}
+.timeline .event:nth-child(2n)::before,
+.timeline .event:nth-child(2n)::after { left: 100%; }
+.timeline .event:nth-child(2n)::before {
+    border-left-color: rgba(0, 0, 0, 0.4);
 }
 
-.timeline .event:nth-child(2n) {
+/* Secondary Cases: Yellow Time Block Orientation */
+.timeline .event:nth-child(4n+0) aside,
+.timeline .event:nth-child(4n+1) aside {
+    order: -1;
+}
+.timeline .event:nth-child(4n+2) aside,
+.timeline .event:nth-child(4n+3) aside {
+    order: 1;
+}
 
+/* Combined Cases: Pointer Color */
+.timeline .event:nth-child(4n+1)::after {
+    border-right-color: hsl(50, 80%, 60%);
+}
+.timeline .event:nth-child(4n+2)::after {
+    border-left-color: hsl(50, 80%, 60%);
+}
+.timeline .event:nth-child(4n+3)::after {
+    border-right-color: #ffffff;
+}
+.timeline .event:nth-child(4n+4)::after {
+    border-left-color: #ffffff;
 }
 
 .typed-cursor {

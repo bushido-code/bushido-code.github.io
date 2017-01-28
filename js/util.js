@@ -23,6 +23,7 @@ if (!Array.prototype.shuffle) {
 // "inline".
 $(function() {
     $('img.svg').each(function () {
+        console.log('YO')
         const $i = $(this)
         const iID = $i.attr('id')
         const iClass = $i.attr('class')
@@ -41,8 +42,8 @@ $(function() {
             if (iStyle) $svg.attr('style', iStyle)
             $svg.removeAttr('xmlns:a')
             $i.replaceWith($svg)
-        }).fail(function () {
-            console.log("FDSAF")
+        }).fail(function (e) {
+            console.log(e)
         })
     })
 })

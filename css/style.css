@@ -131,7 +131,7 @@ a {
     font-size: 1.2rem;
 }
 
-#header nav a {
+#header nav > * {
     margin-left: 1em;
 }
 
@@ -262,6 +262,10 @@ a {
     align-items: center;
 }
 
+#housing hgroup p {
+    font-size: 1.4rem;
+}
+
 #housing main {
     max-width: 1200px;
     display: flex;
@@ -284,46 +288,32 @@ a {
     cursor: pointer;
     position: absolute;
     top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
+    width: 4rem;
+    height: 4rem;
+    margin: -2rem 1rem 0;
+    fill: white;
+    opacity: 0.5;
 }
 
 /* Position the "next button" to the right */
 .next {
     right: 0;
-    border-radius: 3px 0 0 3px;
 }
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-/*  background-color: rgba(0,0,0,0.8);*/
-    background-color: #5C1F7A;
+    opacity: 0.8;
 }
 
 /* Caption text */
 .text {
-    color: white;
     font-family: 'Roboto', sans-serif;
-    font-size: 2.5rem;
+    font-size: 1.6rem;
     padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
+    bottom: 4px;
     width: 100%;
+    margin-top: 8px;
     text-align: center;
-}
-
-.text span {
-    letter-spacing: -1px;  
-   /* background: rgb(0, 0, 0);  fallback color 
-    background: rgba(0, 0, 0, 0.7);*/
-    background: rgba(92, 31, 122, 0.7);
-    padding: 10px; 
 }
 
 /* The dots/bullets/indicators */
@@ -418,39 +408,41 @@ a {
 }
 
 .tile {
-    box-shadow: 0 1px 20px #ffff00;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
     background: #ffffff;
     padding: 30px;
-    width: 33%;
-    margin-bottom:50px;
+    margin: 0 auto 50px;
+    border-top: 8px solid #E6C019;
 }
 
 dd {
 
     line-height: 1.5;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #414141;
     border-top: 1px solid #e0e1e2;
     margin: 0;
-    padding: 12px;
+    padding: 12px 24px 12px 0;
 }
 
 dt {
-
     line-height: 1.5;
     font-size: 1.3rem;
+    font-weight: 500;
     color: #000000;
-    border-top: 1px solid #e0e1e2;
     margin: 0;
-    padding: 12px;
+    padding: 12px 0;
+    text-align: center;
+
 }
 
 .money {
     font-size: 4.5rem;
     color: hsl(280, 40%, 30%);
     text-align:center;
-    margin-bottom: 20px;
-    padding-top: 20px;
+    margin-bottom: 40px;
+    padding-top: 10px;
+    margin-top: 10px;
     border-top: 1px solid #e0e1e2;
 }
 

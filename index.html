@@ -13,6 +13,9 @@
     <script src="js/typed.js"></script>
     <script src="js/util.js"></script>
     <script src="js/app.js"></script>
+    <script type="text/javascript">
+        window.onload = showSlides;
+    </script>
     <img class="svg" src="img/icons.svg" />
 </head>
 <body>
@@ -28,7 +31,7 @@
                 <a href="#curriculum">Curriculum</a>
                 <a href="#schedule">Schedule</a>
                 <a href="#housing">Housing</a>
-                <a href="#tuition">Dates &amp; Tuition</a>
+                <a href="#pricing">Dates &amp; Tuition</a>
               </div>
             </div>
         
@@ -155,6 +158,38 @@
                 </aside>
             </article>
         </div>
+    </article>
+    <article id="housing" class="panel">
+        <hgroup>
+            <h1>Welcome Home</h1>
+        </hgroup>
+
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="img/classroom.jpg" style="width:100%">
+                <div class="text"><span>The Headquarters</span></div>
+            </div>
+            <div class="mySlides fade">
+                <img src="img/livingroom.jpg" style="width:100%">
+                <div class="text"><span>The Break Room</span></div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/pool.jpg" style="width:100%">
+                <div class="text"><span>The Party Area</span></div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+
     </article>
 </body>
 </html>

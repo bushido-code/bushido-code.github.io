@@ -244,6 +244,7 @@ a {
     border-color: #ffffff;
     transform: scale(1.01);
 }
+
 #curriculum section:hover .icon {
     fill: hsl(280, 60%, 40%);
 }
@@ -253,6 +254,117 @@ a {
     font-size: 1.6rem;
     margin: 2rem 0 0.8rem;
 }
+
+#housing {
+    background: hsl(0, 0%, 95%);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+#housing main {
+    max-width: 1200px;
+    display: flex;
+    flex-flow: row wrap;
+    overflow: hidden;
+    margin-bottom: 4rem;
+}
+
+/*START OF SLIDESHOW*/
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 750px;
+    position: relative;
+    margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+/*  background-color: rgba(0,0,0,0.8);*/
+    background-color: #5C1F7A;
+}
+
+/* Caption text */
+.text {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5rem;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.text span {
+    letter-spacing: -1px;  
+   /* background: rgb(0, 0, 0);  fallback color 
+    background: rgba(0, 0, 0, 0.7);*/
+    background: rgba(92, 31, 122, 0.7);
+    padding: 10px; 
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor:pointer;
+    height: 13px;
+    width: 13px;
+    margin: 0 2px;
+    margin-bottom: 30px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #5C1F7A;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+
+/*END OF SLIDESHOW*/
+
+
 
 #schedule {
     display: flex;

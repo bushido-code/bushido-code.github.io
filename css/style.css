@@ -618,3 +618,15 @@ footer aside {
     font-size: 2rem;
     text-transform: uppercase;
 }
+
+
+@media only screen and (max-width: 767px) {
+    .dropbtn {
+        display: none;
+    }
+
+    #landing h1 {
+        font-size: 3.5rem;
+    }
+}
+}

@@ -43,6 +43,7 @@ $(function() {
             $svg.removeAttr('xmlns:a')
             $i.remove()
             $('body').append($svg)
+            console.log($svg)
         }).fail(function (e) {
             console.log('sad')
             console.log(e)

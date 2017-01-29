@@ -28,12 +28,14 @@ $(function() {
         const iClass = $i.attr('class')
         const iStyle = $i.attr('style')
         const iURL = $i.attr('src')
+            console.log('fetching' + iURL)
 
         $.get({
             url: iURL,
             cache: false
         }).done(function (data) {
             console.log('GRAE job')
+            console.log(data)
             // Add replaced ID and classes to the new SVG, and remove invalid XML
             // tags as per http://validator.w3.org.
             const $svg = $('<div>' + data + '</div>').find('svg')

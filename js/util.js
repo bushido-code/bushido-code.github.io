@@ -28,7 +28,6 @@ $(function() {
         const iClass = $i.attr('class')
         const iStyle = $i.attr('style')
         const iURL = $i.attr('src')
-            console.log('fetching' + iURL)
 
         $.get({
             url: iURL,

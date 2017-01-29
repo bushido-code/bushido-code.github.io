@@ -82,16 +82,6 @@ a {
     flex: 1;
 }
 
-/*nav a:hover::after{
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 0;    
-    left: 0;
-    bottom: -1em;
-    border-bottom: 3px solid #5C1F7A;  
-}*/
-
 .panel {
     min-height: 100vh;
 }
@@ -376,6 +366,31 @@ a {
     font-style: normal;
 }
 
+#about {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    background: #ffffff;
+    padding: 3rem;
+}
+
+#about h1 {
+    padding: 5rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+#about p {
+    margin: 0rem auto 0;
+    max-width: 800px;
+    padding-bottom: 2rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+    line-height: 1.75em;
+    color: black;
+    text-align: left;
+}
+
 #pricing {
     display: flex;
     flex-flow: column nowrap;
@@ -389,6 +404,12 @@ a {
     font-size: 4.5rem;
     line-height: 5rem;
     letter-spacing: 0.0625em;
+}
+
+#pricing p {
+    font-weight: 300;
+    color: #888;
+    text-align: center;
 }
 
 #pricing hgroup h2 {

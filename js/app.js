@@ -1,6 +1,4 @@
-$( document ).ready(function() {
-    $(".dropdown-button").dropdown({ hover: true });
-});
+
 
 function checkScroll() {
     if ($(window).scrollTop() > 0) {
@@ -46,6 +44,7 @@ function showSlides(n) {
     for (i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace(" active", "");
     }
+    if (!slides[slideIndex-1]) return
     slides[slideIndex-1].style.display = "block"; 
     dots[slideIndex-1].className += " active";
 }

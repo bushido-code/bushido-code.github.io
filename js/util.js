@@ -23,7 +23,6 @@ if (!Array.prototype.shuffle) {
 // "inline".
 $(function() {
     $('img.svg').each(function () {
-        console.log('YO')
         const $i = $(this)
         const iID = $i.attr('id')
         const iClass = $i.attr('class')
@@ -53,7 +52,8 @@ $(function() {
 // Removes the jumpy effect when clicking on internal links, instead replacing
 // it with a smooth scroll.
 $(function () {
-    $('a').each(function () {
+    $('a[href^="#"]').each(function () {
+        console.log(this)
         const $a = $(this)
         const $t = $($a.attr('href'))
         if ($t.length == 0) return
@@ -61,7 +61,7 @@ $(function () {
             e.preventDefault()
             $('html, body').animate({
                 scrollTop: $t.offset().top - $('#header').height()
-            })
+            }, 500)
         })
     })
 })

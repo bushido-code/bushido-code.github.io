@@ -34,13 +34,9 @@ $(function() {
             url: iURL,
             cache: false
         }).done(function (data) {
-
             if (typeof data != 'string') {
                 data = new XMLSerializer().serializeToString(data);
             }
-
-            console.log('GRAE job')
-            console.log('<div>' + data + '</div>')
             // Add replaced ID and classes to the new SVG, and remove invalid XML
             // tags as per http://validator.w3.org.
             const $svg = $('<div>' + data + '</div>').find('svg')
@@ -50,12 +46,7 @@ $(function() {
             $svg.removeAttr('xmlns:a')
             $i.remove()
             $('body').append($svg)
-            console.log($svg)
-            console.log('parent is ')
-            console.log($svg.parent())
-            console.log('done')
         }).fail(function (e) {
-            console.log('sad')
             console.log(e)
         })
     })

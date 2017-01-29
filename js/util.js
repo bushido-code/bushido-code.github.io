@@ -35,7 +35,7 @@ $(function() {
             cache: false
         }).done(function (data) {
             console.log('GRAE job')
-            console.log(data)
+            console.log('<div>' + data + '</div>')
             // Add replaced ID and classes to the new SVG, and remove invalid XML
             // tags as per http://validator.w3.org.
             const $svg = $('<div>' + data + '</div>').find('svg')

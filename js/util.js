@@ -46,6 +46,7 @@ $(function() {
             $i.remove()
             $('body').append($svg)
             console.log($svg)
+            console.log('done')
         }).fail(function (e) {
             console.log('sad')
             console.log(e)
@@ -59,7 +60,6 @@ $(function() {
 // it with a smooth scroll.
 $(function () {
     $('a[href^="#"]').each(function () {
-        console.log(this)
         const $a = $(this)
         const $t = $($a.attr('href'))
         if ($t.length == 0) return

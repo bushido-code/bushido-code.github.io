@@ -34,6 +34,11 @@ $(function() {
             url: iURL,
             cache: false
         }).done(function (data) {
+
+            if (typeof data != 'string') {
+                data = new XMLSerializer().serializeToString(data);
+            }
+
             console.log('GRAE job')
             console.log('<div>' + data + '</div>')
             // Add replaced ID and classes to the new SVG, and remove invalid XML

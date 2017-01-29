@@ -46,6 +46,8 @@ $(function() {
             $i.remove()
             $('body').append($svg)
             console.log($svg)
+            console.log('parent is ')
+            console.log($svg.parent())
             console.log('done')
         }).fail(function (e) {
             console.log('sad')

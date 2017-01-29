@@ -33,6 +33,7 @@ $(function() {
             url: iURL,
             cache: false
         }).done(function (data) {
+            console.log('great job')
             // Add replaced ID and classes to the new SVG, and remove invalid XML
             // tags as per http://validator.w3.org.
             const $svg = $('<div>' + data + '</div>').find('svg')
@@ -42,6 +43,7 @@ $(function() {
             $svg.removeAttr('xmlns:a')
             $i.replaceWith($svg)
         }).fail(function (e) {
+            console.log('sad')
             console.log(e)
         })
     })

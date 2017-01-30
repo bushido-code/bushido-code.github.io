@@ -642,9 +642,10 @@ footer aside {
         display: none;
     }
     #about h1 {
-    padding: 2rem;
+    padding: .5rem;
+    padding-top: 1.7rem;
     padding-bottom: .5rem;
-    margin-bottom: .5rem;
+    margin-bottom: 1.5rem;
     }
 
     #about p {

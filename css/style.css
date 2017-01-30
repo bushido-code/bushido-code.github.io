@@ -633,6 +633,10 @@ footer aside {
         font-size: 3.5rem;
     }
 
+    #curriculum {
+        width: 100%;
+    }
+
     .timeline .event:nth-child(n) {
         align-self: center;
         margin: 0 0 2rem;

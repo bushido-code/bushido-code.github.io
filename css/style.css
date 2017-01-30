@@ -662,5 +662,13 @@ footer aside {
     color: black;
     text-align: left;
     }
+
+    footer aside{
+        display: none;
+    }
+
+    #housing hgroup p {
+    font-size: 1.2rem;
+}
 }
 

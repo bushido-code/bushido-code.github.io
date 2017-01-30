@@ -629,7 +629,7 @@ footer aside {
         font-size: 3.5rem;
     }
 
-    .timeline .event {
+    .timeline .event:nth-child(n) {
         align-self: center;
         margin: 0 0 2rem;
     }

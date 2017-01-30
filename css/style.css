@@ -633,5 +633,9 @@ footer aside {
         align-self: center;
         margin: 0 0 2rem;
     }
+
+    .timeline::before {
+        display: none;
+    }
 }
 

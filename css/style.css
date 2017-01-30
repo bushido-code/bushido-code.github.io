@@ -621,7 +621,7 @@ footer aside {
 
 
 @media only screen and (max-width: 767px) {
-    .dropbtn {
+    .dropdown {
         display: none;
     }
 

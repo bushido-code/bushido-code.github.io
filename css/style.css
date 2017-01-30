@@ -209,8 +209,8 @@ a {
 }
 
 #curriculum section {
-    flex: 1 24%;
-    width: 200px;
+    flex: 24% 1 1;
+    min-width: 250px;
     margin: 2px;
     padding: 4rem 2rem 3rem;
     display: flex;

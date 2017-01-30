@@ -634,6 +634,7 @@ footer aside {
     }
 
     #curriculum section{
+        flex: 99%;
         width: 100%;
     }
 

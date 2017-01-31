@@ -769,7 +769,7 @@ footer aside {
 
 @media only screen and (max-width: 767px) {
 
-    #deadlines label {
+    #deadlines {
         font-size:.5rem;
         min-width: 150px;
     }
@@ -828,7 +828,7 @@ footer aside {
 
 @media only screen and (max-width: 400px) {
 
-        #deadlines label {
+    #deadlines {
         font-size:.5rem;
         min-width: 150px;
     }

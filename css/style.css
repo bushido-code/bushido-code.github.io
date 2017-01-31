@@ -834,11 +834,11 @@ footer aside {
 
     #deadlines {
         font-size:1.3rem;
-        min-width: 150px;
+        min-width: 70px;
     }
 
     #deadlines label {
-        font-size: .5;
+        font-size: .3;
     }
         #curriculum section{
         flex: 99%;

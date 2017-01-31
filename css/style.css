@@ -655,7 +655,7 @@ footer aside {
     }
 
     #curriculum section{
-        flex: 99%;
+        flex: 49%;
         width: 100%;
     }
 
@@ -698,3 +698,9 @@ footer aside {
     }
 }
 
+@media only screen and (max-width: 400px) {
+        #curriculum section{
+        flex: 99%;
+        width: 100%;
+    }
+}

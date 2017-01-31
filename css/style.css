@@ -827,6 +827,11 @@ footer aside {
 }
 
 @media only screen and (max-width: 400px) {
+
+        #deadlines label {
+        font-size:.5rem;
+        min-width: 150px;
+    }
         #curriculum section{
         flex: 99%;
         width: 100%;

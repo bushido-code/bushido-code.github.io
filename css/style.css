@@ -769,6 +769,10 @@ footer aside {
 
 @media only screen and (max-width: 767px) {
 
+    #deadlines label {
+        font-size:.5rem;
+    }
+
     .nav {
         display: none;
     }
